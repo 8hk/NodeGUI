@@ -27,7 +27,7 @@ public:
     CustomButton();
     CustomButton(int size);
     void setSize(int size);
-    int getSize();
+    int getSize() const;
     ~CustomButton();
     bool getClicked() const;
     void setClicked(bool value);

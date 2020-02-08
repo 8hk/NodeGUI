@@ -16,17 +16,12 @@ QT_END_NAMESPACE
 class MainWindow : public QMainWindow
 {
 Q_OBJECT
-
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-
     CustomButton *buttonList;
-
 private:
     Ui::MainWindow *ui;
-
-
 };
 
 #endif //NODEGUI_MAINWINDOW_H
