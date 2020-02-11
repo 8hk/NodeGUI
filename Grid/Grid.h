@@ -14,12 +14,8 @@ class Grid:public QGridLayout {
     Grid(QWidget *widget);
     void setLayout(Grid *layout);
 public:
+    Grid(QWidget *pWidget, std::shared_ptr<CustomButton> sharedPtr, std::pair<int, int> pair);
     Grid *getLayout() const;
-    Grid(QWidget * widget,CustomButton * buttonList,std::pair<int,int> colRow);
-    void add2Widget(QWidget *widget,std::pair<int,int> colRow);
-
-
-
 };
 
 

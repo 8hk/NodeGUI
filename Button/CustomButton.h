@@ -12,18 +12,13 @@
 #include <vector>
 #include <memory>
 #include <iostream>
-#include <QDebug>
+#include <QCheckBox>
+#include <utility>
+
 class CustomButton: public QPushButton {
     Q_OBJECT
-    int size;
-    bool clicked;
-    std::shared_ptr<std::vector<CustomButton>> list;
 public:
     const std::shared_ptr<std::vector<CustomButton>> &getInstance() const;
-
-   // void setList(const std::shared_ptr<std::vector<CustomButton>> &list);
-
-public:
     CustomButton();
     CustomButton(int size);
     void setSize(int size);
@@ -31,10 +26,10 @@ public:
     ~CustomButton();
     bool getClicked() const;
     void setClicked(bool value);
-
-public slots:
-    void changeColor();
-
+private:
+    int size;
+    bool clicked;
+    std::shared_ptr<std::vector<CustomButton>> list;
 };
 
 

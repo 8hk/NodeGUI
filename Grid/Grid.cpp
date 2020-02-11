@@ -3,7 +3,7 @@
 //
 
 #include "Grid.h"
-Grid::Grid(QWidget *widget,CustomButton * buttonList, std::pair<int, int> colRow) {
+Grid::Grid(QWidget *widget, std::shared_ptr<CustomButton> buttonList, std::pair<int, int> colRow) {
     layout = new Grid(widget);
     int columnSize = colRow.first;
     int rowSize = colRow.second;
@@ -14,7 +14,6 @@ Grid::Grid(QWidget *widget,CustomButton * buttonList, std::pair<int, int> colRow
         }
     }
 }
-
 Grid *Grid::getLayout() const {
     return layout;
 }
@@ -24,7 +23,7 @@ void Grid::setLayout(Grid *layout) {
 
 Grid::Grid(QWidget *widget):QGridLayout(widget){
 }
-void Grid::add2Widget(QWidget *widget,std::pair<int,int> colRow) {
-    getLayout()->addWidget(widget,colRow.first,colRow.second);
-}
+
+
+
 
